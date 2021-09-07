@@ -84,6 +84,16 @@ Version: 1.1.1 - Date: 20210317</description>
                     </applications>
                 </item>
                 <item>
+                    <name>Active Channels</name>
+                    <key>check.asterisk[calls.channels]</key>
+                    <history>30d</history>
+                    <applications>
+                        <application>
+                            <name>Asterisk PBX</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
                     <name>IAX2 Peers Offline</name>
                     <key>check.asterisk[iax2.peers.offline]</key>
                     <delay>5m</delay>
