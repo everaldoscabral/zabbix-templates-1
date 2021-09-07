@@ -198,11 +198,19 @@ calls.active() {
   expr $(asteriskCmd "core show channels concise"  | grep "\!Up\!" | wc -l) / 2
 }
 
+
 # return int
 calls.processed() {
   # disable cache for this check
   asteriskCacheEnabled=false
   asteriskCmd "core show channels" | grep "call.* processed" | cut -d" " -f 1
+}
+
+# return int
+calls.channels() {
+  # disable cache for this check
+  asteriskCacheEnabled=false
+  asteriskCmd "core show channels" | grep "active.* channels" | cut -d" " -f 1
 }
 
 calls.longest.duration() {
